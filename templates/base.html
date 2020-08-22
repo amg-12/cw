@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div style="margin:30px">
+      <h1 style="display:inline">amitai.ga<span style="color:lightgrey">unt</span></h1>
+      <span style="padding:30px;text-decoration:none">
+        <a href="{% url 'blog:index' %}">blog</a> |
+        {# <a href="{% url 'cv:index' %}">cv</a> | #}
+        <a href="https://github.com/amg-12/cw">source</a> |
+        <a href="{% url 'admin:index' %}">admin</a>
+      </span>
+
+      {% block content %}{% endblock %}
+
+    </div>
+  </body>
+</html>
