@@ -1,0 +1,37 @@
+:root {
+  --space: 32px;
+}
+
+body {
+  zoom: 125%;
+  margin: var(--space);
+  word-wrap: break-word;
+}
+
+.nav {
+  margin-bottom: var(--space);
+  white-space: nowrap;
+}
+
+.nav h1 {
+  display: inline;
+  vertical-align: sub;
+  padding-right: var(--space);
+}
+
+.nav a {
+  text-decoration: none;
+  color: grey;
+}
+
+.unt {
+  color: lightgrey !important;
+}
+
+.post {
+  margin-bottom: var(--space);
+}
+
+.post h3, .post p {
+  margin: 0;
+}
