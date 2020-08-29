@@ -21,14 +21,17 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '_zzm33=ki&jy^!vb3rd$!x3lp%v(2mev^9=on%#rk5n12bpk4r'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
+# Get SECRET_KEY, DEBUG and ALLOWED_HOSTS from secert.py
+# If secert.py is not found, the project will run only on localhost
+try:
+    from . import secret
+    SECRET_KEY = secret.SECRET_KEY
+    DEBUG = secret.DEBUG
+    ALLOWED_HOSTS = secret.ALLOWED_HOSTS
+except ImportError:
+    SECRET_KEY = 'no_key'
+    DEBUG = True
+    ALLOWED_HOSTS = ['127.0.0.1']
 
 # Application definition
 
