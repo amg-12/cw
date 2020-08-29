@@ -3,9 +3,16 @@
 {% block content %}
   {% for post in posts %}
     <div class="post">
-      <h3>{{ post.author }}</h3>
-      <p>{{ post.content }}</p>
-      <small>{{ post.date | date:"d/m/y, H:i" }}</small>
+      <h3>{{ post.title }}</h3>
+      <pre>{{ post.content }}</pre>
+      <small>
+        <abbr title="Posted by {{ post.author }}">
+          {{ post.date | date:"d/m/y, H:i" }}
+        </abbr>
+        {% if post.pin %}
+          <abbr title="pinned">📌</abbr>
+        {% endif %}
+      </small>
     </div>
   {% endfor %}
 {% endblock %}

@@ -3,4 +3,4 @@ from .models import Post
 
 def index(request):
     return render(request, 'blog/index.html',
-        {'posts': Post.objects.order_by('-date')})
+        {'posts': Post.objects.order_by('-pin', '-date')})

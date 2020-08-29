@@ -16,7 +16,7 @@ body {
 .nav h1 {
   display: inline;
   vertical-align: sub;
-  padding-right: var(--space);
+  margin-right: var(--space);
 }
 
 .nav a {
@@ -30,8 +30,22 @@ body {
 
 .post {
   margin-bottom: var(--space);
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-left-color: lightgrey;
+  padding-left: 1em;
 }
 
-.post h3, .post p {
+.post h3, .post pre {
   margin: 0;
+}
+
+pre {
+  font-size: inherit;
+  font-family: inherit;
+  white-space: pre-wrap;
+}
+
+abbr {
+  text-decoration: none;
 }
