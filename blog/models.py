@@ -1,7 +1,7 @@
 from django.db import models
 
-
 MAX = 14
+
 
 class Post(models.Model):
     title = models.CharField(max_length=255, blank=True, default="", verbose_name='')
