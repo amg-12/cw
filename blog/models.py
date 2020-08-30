@@ -1,6 +1,8 @@
 from django.db import models
 
 
+MAX = 14
+
 class Post(models.Model):
     title = models.CharField(max_length=255, blank=True, default="", verbose_name='')
     content = models.TextField(blank=True, default="", verbose_name='')
@@ -10,4 +12,4 @@ class Post(models.Model):
 
     def __str__(self):
         name = self.title if self.title else self.content
-        return name[:12].strip() + ('...' if len(name) > 10 else '')
+        return name[:MAX].strip() + ('...' if len(name) > MAX else '')
