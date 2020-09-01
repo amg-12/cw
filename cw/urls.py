@@ -20,6 +20,7 @@ from django.views.generic import RedirectView, TemplateView
 urlpatterns = [
     path('', RedirectView.as_view(url='blog')),
     re_path(r'^blog/?', include(('blog.urls', 'blog'), namespace='blog')),
+    re_path(r'^cv/?', include(('cv.urls', 'cv'), namespace='cv')),
     re_path(r'^unt/?', TemplateView.as_view(template_name="unt.html"), name="unt"),
     re_path(r'^admin/?', admin.site.urls),
 ]

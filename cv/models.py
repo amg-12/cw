@@ -43,5 +43,5 @@ class Achievement(models.Model):
     time = models.CharField(max_length=255)
     description = models.TextField()
 
-    def __str__():
+    def __str__(self):
         return self.description[:MAX].strip() + ('...' if len(self.description) > MAX else '')

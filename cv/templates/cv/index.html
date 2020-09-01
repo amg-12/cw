@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div>
+    <h3>{{ details.name }}</h3>
+    <h3>{{ details.number }}</h3>
+    <h3>{{ details.address }}</h3>
+    <h3>{{ details.email }}</h3>
+  </div>
+  {% for link in links %}
+    <h3><a href="{{ link.url }}">{{ link.text }}</a></h3>
+  {% endfor %}
+  <h2>Education</h2>
+  {% for school in education %}
+  <p>
+    <b>{{ school.name }}</b>
+    ({{ school.time }})<br>
+    {{ school.subject }}:
+    {{ school.grade }}
+  </p>
+  {% endfor %}
+  <h2>Career</h2>
+  {% for work in career %}
+  <p>
+    <b>{{ work.name }}</b>
+    ({{ work.time }})<br>
+    <b>{{ work.position }}</b><br>
+    {{ work.description }}<br>
+    {{ work.experience }}
+  </p>
+  {% endfor %}
+  <h2>Projects and achievements</h2>
+  <ul>
+  {% for achievement in achievements %}
+     <li>{{ achievement.description }} ({{ achievement.time }})</li>
+  {% endfor %}
+  </ul>
+{% endblock %}
