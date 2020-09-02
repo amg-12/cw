@@ -36,7 +36,7 @@ body {
   padding-left: 1em;
 }
 
-h3, .post pre {
+.post h3, .post pre {
   margin: 0;
 }
 
@@ -48,4 +48,12 @@ pre {
 
 abbr {
   text-decoration: none;
+}
+
+.cv div {
+  margin-bottom: 1em
+}
+
+.cv h3, .cv p {
+  margin: 0;
 }

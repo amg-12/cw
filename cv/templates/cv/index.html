@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="cv">
   <div>
     <h3>{{ details.name }}</h3>
     <h3>{{ details.number }}</h3>
@@ -12,22 +13,23 @@
   {% endfor %}
   <h2>Education</h2>
   {% for school in education %}
-  <p>
-    <b>{{ school.name }}</b>
-    ({{ school.time }})<br>
-    {{ school.subject }}:
-    {{ school.grade }}
-  </p>
+  <div>
+    <p>
+      <b>{{ school.name }}</b> ({{ school.time }})
+    </p>
+    <p>{{ school.subject }}: {{ school.grade }}</p>
+  </div>
   {% endfor %}
   <h2>Career</h2>
   {% for work in career %}
-  <p>
-    <b>{{ work.name }}</b>
-    ({{ work.time }})<br>
-    <b>{{ work.position }}</b><br>
-    {{ work.description }}<br>
-    {{ work.experience }}
-  </p>
+  <div>
+    <p>
+      <b>{{ work.name }}</b> ({{ work.time }})
+    </p>
+    <p><i>{{ work.position }}</i></p>
+    <p>{{ work.description }}</p>
+    <p>{{ work.experience }}</p>
+  </div>
   {% endfor %}
   <h2>Projects and achievements</h2>
   <ul>
@@ -35,4 +37,5 @@
      <li>{{ achievement.description }} ({{ achievement.time }})</li>
   {% endfor %}
   </ul>
+</div>
 {% endblock %}

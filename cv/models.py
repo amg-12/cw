@@ -32,8 +32,8 @@ class Work(models.Model):
     name = models.CharField(max_length=255)
     time = models.CharField(max_length=255)
     position = models.CharField(max_length=255)
-    description = models.TextField()
-    experience = models.TextField()
+    description = models.TextField(blank=True)
+    experience = models.TextField(blank=True)
 
     def __str__(self):
         return self.name
