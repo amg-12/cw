@@ -26,13 +26,12 @@ body {
 
 .unt {
   color: lightgrey !important;
+  cursor: auto;
 }
 
 .post {
   margin-bottom: var(--space);
-  border-left-style: solid;
-  border-left-width: 2px;
-  border-left-color: lightgrey;
+  border-left: 2px solid lightgrey;
   padding-left: 1em;
 }
 
@@ -56,4 +55,13 @@ abbr {
 
 .cv h3, .cv p {
   margin: 0;
+}
+
+.fof {
+  text-align: center;
+}
+
+.fof img {
+  width: 256px;
+  height: 256px;
 }
